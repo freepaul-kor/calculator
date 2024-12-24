@@ -37,7 +37,19 @@
         let numtwo = '';
         const $operator = document.querySelector('#operator');
         const $result = document.querySelector('#result')
-
+        const onClickNumber = (event) => {
+            if (operator) { //비어있지 않다
+                if(!numtwo){
+                    $result.value = '';
+                }
+                numtwo += event.target.textContent;
+                $result.value += event.target.textContent;
+            } else {//비어있다
+            numone += event.target.textConntent;
+            $result.value += event.target.textContent;
+        }
+        
+    };
 
 
 
